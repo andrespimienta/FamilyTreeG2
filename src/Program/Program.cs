@@ -28,6 +28,8 @@ namespace Program
             SumVisitor visitor = new SumVisitor();
             n1.Accept(visitor);
             Console.WriteLine(visitor.Sum);
+            Console.WriteLine("ESTO SALE ANTES DEL VIERNESSSSS");
+
         }
     }
 }
