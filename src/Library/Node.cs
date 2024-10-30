@@ -6,8 +6,11 @@ using System.Collections.ObjectModel;
 public class Node
 {
     private int number;
+    private Person persona;
 
     private List<Node> children = new List<Node>();
+    private List<Person> hijos = new List<Person>();
+
 
     public int Number {
         get
@@ -15,6 +18,9 @@ public class Node
             return this.number;
         }
     }
+
+    public Person Persona { get; set; }
+
 
     public ReadOnlyCollection<Node> Children {
         get
@@ -27,11 +33,28 @@ public class Node
     {
         this.number = number;
     }
+    
+    public Node(Person Persona)
+    {
+        this.persona = Persona;
+    }
+
+    public int ConocerEdad(Node node)
+    { 
+        return node.persona.Edad;
+    }
+
 
     public void AddChildren(Node n)
     {
         this.children.Add(n);
     }
+    
+    public void AddChildren(Person p)
+    {
+        this.hijos.Add(p);
+    }
+    
     public void Accept(IVisitor visitor)
     {
         visitor.Visit(this);
