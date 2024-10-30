@@ -50,17 +50,13 @@ public class Node
         this.children.Add(n);
     }
     
-    public void AddChildren(Person p)
-    {
-        this.hijos.Add(p);
-    }
     
     public void Accept(IVisitor visitor)
     {
         visitor.Visit(this);
-        foreach (var item in this.children)
+        foreach (Node hijo in this.children)
         {
-            item.Accept(visitor);
+            hijo.Accept(visitor);
         }
     }
 }
