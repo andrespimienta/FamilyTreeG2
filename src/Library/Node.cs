@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 public class Node
 {
     // Atributos del Nodo
-    private int number;
+    private int number = 0;     // (Por defecto inicia en 0, si el nodo contiene una Persona, number siempre va a ser 0)
     private Person persona;
     private List<Node> children = new List<Node>();
     
@@ -52,7 +52,6 @@ public class Node
     { 
         return this.persona.Edad;
     }
-    
     
     public void Accept(IVisitor visitor)
     {

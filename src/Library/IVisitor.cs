@@ -2,5 +2,5 @@ namespace Library;
 
 public interface IVisitor
 {
-    void Visit(Node unNodo);
+    void Visit(Node nodoVisitado);
 }

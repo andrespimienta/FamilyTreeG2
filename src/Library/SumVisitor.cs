@@ -17,15 +17,15 @@ public class SumVisitor : IVisitor
     }
     
     // Métodos
-    public void Visit(Node unNodo)
+    public void Visit(Node nodoVisitado)
     {
-        if (unNodo.Number != 0)
+        if (nodoVisitado.Number != 0)
         {
-            sumaNumeros += unNodo.Number;
+            sumaNumeros += nodoVisitado.Number;
         }
         else
         {
-            sumaEdades += unNodo.ConocerEdad();
+            sumaEdades += nodoVisitado.ConocerEdad();
         }
     }
 }

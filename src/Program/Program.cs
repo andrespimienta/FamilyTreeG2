@@ -35,15 +35,14 @@ namespace Program
             // ====================================================================================================== //
             
             // Árbol de Personas
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("Prueba parte 3, con personas");
-            Person p1 = new Person("Joaco", 22);
-            Person p2 = new Person("Nico", 28);
-            Person p3 = new Person("Esteban", 19);
-            Person p4 = new Person("Andres", 21);
-            Person p5 = new Person("Messi", 10);
-            Person p6 = new Person("Nadal", 50);
-            Person p7 = new Person("Jordan", 23);
+            Person p1 = new Person("Jordan", 61);
+            Person p2 = new Person("Messi", 37);
+            Person p3 = new Person("Nadal", 38);
+            Person p4 = new Person("Joaco", 22);
+            Person p5 = new Person("Nico", 28);
+            Person p6 = new Person("Andres", 21);
+            Person p7 = new Person("Esteban", 18);
+            
 
             Node n11 = new Node(p1);
             Node n12 = new Node(p2);
@@ -74,11 +73,13 @@ namespace Program
             Console.WriteLine("----------------------------\n" + 
                               "Prueba parte 4.1, con personas\n" + 
                               $"Hijo mayor: {visitorHijoMayor.GetHijoMayor().Nombre}");
+            /*
             NomLargoVisitor visitorNombreLargo = new NomLargoVisitor();
             n11.Accept(visitorNombreLargo);
             Console.WriteLine("----------------------------\n" + 
                               "Prueba parte 4.2, con personas\n" + 
                               $"Nombre más largo: {visitorNombreLargo.SumaEdades}");
+            */
         }
     }
 }
