@@ -19,11 +19,11 @@ public class SumVisitor : IVisitor
     // Métodos
     public void Visit(Node nodoVisitado)
     {
-        if (nodoVisitado.Number != 0)
+        if (nodoVisitado.Number != 0)   // Si no vale 0, es un nodo de Número
         {
             sumaNumeros += nodoVisitado.Number;
         }
-        else
+        else        // De lo contrario, es un nodo de Persona
         {
             sumaEdades += nodoVisitado.ConocerEdad();
         }
