@@ -42,7 +42,7 @@ public class Node
         this.persona = unaPersona;
     }
 
-   // Métodos
+    // Métodos
     public void AddChildren(Node n)
     {
         this.children.Add(n);

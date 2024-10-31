@@ -7,6 +7,7 @@ namespace Program
     {
         static void Main(string[] args)
         {
+            // Árbol de Números
             Node n1 = new Node(1);
             Node n2 = new Node(2);
             Node n3 = new Node(3);
@@ -24,14 +25,18 @@ namespace Program
             n3.AddChildren(n6);
             n3.AddChildren(n7);
 
-            // visitar el árbol aquí
+            // Visita al árbol de Números
             SumVisitor visitor = new SumVisitor();
             n1.Accept(visitor);
-            Console.WriteLine(visitor.SumaNodes);
+            Console.WriteLine("----------------------------\n" + 
+                              "Prueba original, con números\n" + 
+                              $"Suma total: {visitor.SumaNumeros}");
             
-            // codigo con personas
+            // ====================================================================================================== //
+            
+            // Árbol de Personas
             Console.WriteLine("----------------------------");
-            Console.WriteLine("Prueba con personas");
+            Console.WriteLine("Prueba parte 3, con personas");
             Person p1 = new Person("Joaco", 22);
             Person p2 = new Person("Nico", 28);
             Person p3 = new Person("Esteban", 19);
@@ -57,10 +62,23 @@ namespace Program
             n13.AddChildren(n16);
             n13.AddChildren(n17);
             
-            // visitar el árbol de personas
+            // Visita al árbol de Personas
             SumVisitor visitorEdad = new SumVisitor();
             n11.Accept(visitorEdad);
-            Console.WriteLine(visitorEdad.SumaEdades);
+            Console.WriteLine("----------------------------\n" + 
+                              "Prueba parte 3, con personas\n" + 
+                              $"Suma total edades: {visitorEdad.SumaEdades}");
+            
+            HMayorVisitor visitorHijoMayor = new HMayorVisitor();
+            n11.Accept(visitorHijoMayor);
+            Console.WriteLine("----------------------------\n" + 
+                              "Prueba parte 4.1, con personas\n" + 
+                              $"Hijo mayor: {visitorHijoMayor.GetHijoMayor().Nombre}");
+            NomLargoVisitor visitorNombreLargo = new NomLargoVisitor();
+            n11.Accept(visitorNombreLargo);
+            Console.WriteLine("----------------------------\n" + 
+                              "Prueba parte 4.2, con personas\n" + 
+                              $"Nombre más largo: {visitorNombreLargo.SumaEdades}");
         }
     }
 }
