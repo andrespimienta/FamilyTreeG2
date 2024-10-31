@@ -28,7 +28,7 @@ namespace Program
             // Visita al árbol de Números
             SumVisitor visitor = new SumVisitor();
             n1.Accept(visitor);
-            Console.WriteLine("----------------------------\n" + 
+            Console.WriteLine("-----------------------------\n" + 
                               "Prueba original, con números\n" + 
                               $"Suma total: {visitor.SumaNumeros}");
             
@@ -63,19 +63,19 @@ namespace Program
             // Visita al árbol de Personas
             SumVisitor visitorEdad = new SumVisitor();
             n11.Accept(visitorEdad);
-            Console.WriteLine("----------------------------\n" + 
+            Console.WriteLine("-----------------------------\n" + 
                               "Prueba parte 3, con personas\n" + 
                               $"Suma total edades: {visitorEdad.SumaEdades}");
             
             HMayorVisitor visitorHijoMayor = new HMayorVisitor();
             n11.Accept(visitorHijoMayor);
-            Console.WriteLine("----------------------------\n" + 
+            Console.WriteLine("-----------------------------\n" + 
                               "Prueba parte 4.1, con personas\n" + 
                               $"Hijo mayor: {visitorHijoMayor.GetHijoMayor().Nombre}");
             /*
             NomLargoVisitor visitorNombreLargo = new NomLargoVisitor();
             n11.Accept(visitorNombreLargo);
-            Console.WriteLine("----------------------------\n" + 
+            Console.WriteLine("-----------------------------\n" + 
                               "Prueba parte 4.2, con personas\n" + 
                               $"Nombre más largo: {visitorNombreLargo.SumaEdades}");
             */
