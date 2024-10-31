@@ -2,12 +2,30 @@ namespace Library;
 
 public class Person
 {
-    public string Nombre { get; set; }
-    public int Edad { get; set; }
+    // Atributos
+    private string nombre;
+    private int edad;
+    
+    // Getters
+    public string Nombre
+    {
+        get
+        {
+            return this.nombre;
+        }
+    }
+    public int Edad
+    {
+        get
+        {
+            return this.edad;
+        }
+    }
 
+    // Constructor
     public Person (string nombre, int edad)
     {
-        this.Nombre = nombre;
-        this.Edad = edad;
+        this.nombre = nombre;
+        this.edad = edad;
     }
 }

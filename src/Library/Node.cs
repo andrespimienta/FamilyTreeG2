@@ -5,49 +5,52 @@ using System.Collections.ObjectModel;
 
 public class Node
 {
+    // Atributos del Nodo
     private int number;
     private Person persona;
-
     private List<Node> children = new List<Node>();
-    private List<Person> hijos = new List<Person>();
-
-
+    
+    //Getters
     public int Number {
         get
         {
             return this.number;
         }
     }
-
-    public Person Persona { get; set; }
-
-
+    public Person Persona
+    {
+        get
+        {
+            return this.persona;
+        }
+    }
     public ReadOnlyCollection<Node> Children {
         get
         {
             return this.children.AsReadOnly();
         }
     }
-
-    public Node(int number)
+    
+    // Constructores
+    public Node(int unNumero)
     {
-        this.number = number;
+        this.number = unNumero;
     }
     
-    public Node(Person Persona)
+    public Node(Person unaPersona)
     {
-        this.persona = Persona;
+        this.persona = unaPersona;
     }
 
-    public int ConocerEdad(Node node)
-    { 
-        return node.persona.Edad;
-    }
-
-
+   // Métodos
     public void AddChildren(Node n)
     {
         this.children.Add(n);
+    }
+    
+    public int ConocerEdad()
+    { 
+        return this.persona.Edad;
     }
     
     
