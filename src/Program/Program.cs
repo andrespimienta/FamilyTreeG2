@@ -72,13 +72,13 @@ namespace Program
             Console.WriteLine("-----------------------------\n" + 
                               "Prueba parte 4.1, con personas\n" + 
                               $"Hijo mayor: {visitorHijoMayor.GetHijoMayor().Nombre}");
-            /*
+            
             NomLargoVisitor visitorNombreLargo = new NomLargoVisitor();
             n11.Accept(visitorNombreLargo);
             Console.WriteLine("-----------------------------\n" + 
                               "Prueba parte 4.2, con personas\n" + 
-                              $"Nombre más largo: {visitorNombreLargo.SumaEdades}");
-            */
+                              $"Nombre más largo: {visitorNombreLargo.nombre}");
+            
         }
     }
 }

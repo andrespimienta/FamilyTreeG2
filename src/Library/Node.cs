@@ -52,6 +52,11 @@ public class Node
     { 
         return this.persona.Edad;
     }
+    public string ConocerNombre()
+    { 
+        return this.persona.GetName();
+    }
+    
     
     public void Accept(IVisitor visitor)
     {

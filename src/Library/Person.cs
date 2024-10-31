@@ -28,4 +28,13 @@ public class Person
         this.nombre = nombre;
         this.edad = edad;
     }
+
+    public string GetName()
+    {
+        return this.Nombre;
+    }
+    public int GetLengthName()
+    {
+        return this.Nombre.Length;
+    }
 }
