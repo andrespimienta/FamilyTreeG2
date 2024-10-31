@@ -43,7 +43,6 @@ namespace Program
             Person p6 = new Person("Andres", 21);
             Person p7 = new Person("Esteban", 18);
             
-
             Node n11 = new Node(p1);
             Node n12 = new Node(p2);
             Node n13 = new Node(p3);
